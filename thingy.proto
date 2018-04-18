@@ -1,0 +1,15 @@
+syntax = "proto3";
+option go_package = "../../../tmp/demo/thingy";
+package thingy;
+
+message Request {
+  string id = 1;
+}
+
+message Response {
+  string id = 1;
+}
+
+service Thingy {
+  rpc Read (Request) returns (Response) {}
+}
